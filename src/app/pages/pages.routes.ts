@@ -6,17 +6,21 @@ import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { HomeComponent } from './home/home.component';
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const pagesRoutes: Routes = [
     {
             path: '',
             component: PagesComponent,
             children: [
-                { path: 'dashboard', component: DashboardComponent },
-                { path: 'progress', component: ProgressComponent },
-                { path: 'graficas1', component: Graficas1Component },
-                { path: 'home', component: HomeComponent },
-                { path: 'accout-settings', component: AccoutSettingsComponent },
+                { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Dashboard' } },
+                { path: 'progress', component: ProgressComponent, data: { titulo: 'Progress' } },
+                { path: 'graficas1', component: Graficas1Component, data: { titulo: 'Gráficas' } },
+                { path: 'home', component: HomeComponent, data: { titulo: 'Home' } },
+                { path: 'accout-settings', component: AccoutSettingsComponent, data: { titulo: 'Ajustes del tema' } },
+                { path: 'promesas', component: PromesasComponent, data: { titulo: 'Promesas' } },
+                { path: 'rxjs', component: RxjsComponent, data: { titulo: 'RxJs' } },
                 { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
             ]
     },
