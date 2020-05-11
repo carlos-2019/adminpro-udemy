@@ -12,6 +12,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 
 import { LoginGuardGuard } from '../services/service.index';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const pagesRoutes: Routes = [
     {
@@ -23,10 +24,13 @@ const pagesRoutes: Routes = [
                 { path: 'progress', component: ProgressComponent, data: { titulo: 'Progress' } },
                 { path: 'graficas1', component: Graficas1Component, data: { titulo: 'Gráficas' } },
                 { path: 'home', component: HomeComponent, data: { titulo: 'Home' } },
-                { path: 'accout-settings', component: AccoutSettingsComponent, data: { titulo: 'Ajustes del tema' } },
-                { path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de usuario' } },
                 { path: 'promesas', component: PromesasComponent, data: { titulo: 'Promesas' } },
                 { path: 'rxjs', component: RxjsComponent, data: { titulo: 'RxJs' } },
+                { path: 'accout-settings', component: AccoutSettingsComponent, data: { titulo: 'Ajustes del tema' } },
+                { path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de usuario' } },
+
+                // Mantenimiento
+                { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimientos de Usuarios' } },
                 { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
             ]
     },
