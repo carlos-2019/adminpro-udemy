@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 
 import Swal from 'sweetalert2';
 // import swal from 'SweetAlert';
@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { UsuarioService } from '../services/service.index';
 import { Usuario } from '../models/usuario.model';
 import { Router } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 
 
@@ -40,12 +41,26 @@ export class RegisterComponent implements OnInit {
     };
   }
 
+  // validateEmailNotTaken( control: AbstractControl) {
+  //   return this._usuarioService.checkEmailNotTaken(control.value)
+  //       .pipe(
+  //         map(res => {
+  //           console.log(res);
+  //           return res ? null : {emailTaken: true};
+  //         })
+  //       );
+  // }
+
   ngOnInit(): void {
     init_plugins();
 
     this.forma = new FormGroup({
         nombre: new FormControl(null, Validators.required),
-        correo: new FormControl(null, [Validators.required, Validators.email]),
+        correo: new FormControl(null, [
+          Validators.required,
+          Validators.email]),
+          // Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')
+        // ], this.validateEmailNotTaken.bind(this)),
         password: new FormControl(null, Validators.required),
         password2: new FormControl(null, Validators.required),
         condiciones: new FormControl(false)

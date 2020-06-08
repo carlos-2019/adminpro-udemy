@@ -1,149 +1,27 @@
-html,
-body {
-    height: 100vh;
+/*******************
+Error Page
+******************/
+
+.error-box {
+    height: 100%;
+    position: fixed;
+    background: url(../../../assets/images/background/error-bg.jpg) no-repeat center center #fff;
+    width: 100%;
 }
 
-html:before,
-html:after,
-body:before,
-body:after {
-    content: '';
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.error-box .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px;
 }
 
-html {
-    overflow: hidden;
+.error-body {
+    padding-top: 5%;
 }
 
-html:before {
-    height: 105vmax;
-    width: 105vmax;
-    z-index: -4;
+.error-body h1 {
+    font-size: 210px;
+    font-weight: 900;
+    text-shadow: 4px 4px 0 #ffffff, 6px 6px 0 #263238;
+    line-height: 210px;
 }
-
-html:after {
-    height: 80vmax;
-    width: 80vmax;
-    z-index: -3;
-}
-
-body {
-    color: #FFF;
-    font-size: 100%;
-    background: url(src/assets/images/ban55.jpg)no-repeat center top;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    background-attachment: fixed;
-    text-align: center;
-    font-family: 'Slabo 27px', serif;
-}
-
-body:before {
-    height: 60vmax;
-    width: 60vmax;
-    z-index: -2;
-}
-
-body:after {
-    height: 40vmax;
-    width: 40vmax;
-    z-index: -1;
-}
-
-.main {
-    text-align: center;
-    z-index: 5;
-    margin-top: 5em;
-}
-
-.main a {
-    text-decoration: none;
-    color: #fff;
-}
-
-p {
-    font-size: 18px;
-    margin-top: 0;
-    letter-spacing: 2px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-    font-size: 14em;
-    margin: 0;
-}
-
-.main p {
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    line-height: 2em;
-}
-
-button {
-    background: linear-gradient(#b2aef4, #1204ff);
-    padding: 0 12px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
-    outline: none;
-    color: #FFF;
-    font: 400 16px/2.5 Nunito, 'Varela Round', Sans-serif;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-
-/*--//banner--*/
-
-
-/*--/responsive design--*/
-
-@media(max-width:1440px) {
-    .copyright p {
-        margin: 2em 0 0;
-    }
-}
-
-@media(max-width:1024px) {
-    .copyright p {
-        margin: 2em 0 0;
-    }
-}
-
-@media(max-width:480px) {
-    h1 {
-        font-size: 10em;
-    }
-    .main p {
-        font-size: 1em;
-        letter-spacing: 2px;
-        line-height: 2em;
-    }
-    .copyright p {
-        margin: 7em 0 0;
-    }
-}
-
-@media(max-width:414px) {
-    .main p {
-        font-size: 0.9em;
-        letter-spacing: 2px;
-        line-height: 2em;
-    }
-}
-
-@media(max-width:320px) {
-    .main {
-        margin-top: 2em;
-    }
-}
-
-
-/*--//responsive design--*/
